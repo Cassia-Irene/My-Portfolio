@@ -14,10 +14,10 @@ const HeaderContainer = styled.header`
 const Logo = styled.img`
     width: 95px;
     height: 76px;
-    
 `;
 
 const ContatoButton = styled.button`
+    position: absolute;
     width: 133px;
     height: 47px;
     border: solid 2px #FFBB1B;

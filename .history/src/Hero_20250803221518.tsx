@@ -127,7 +127,7 @@ const CentralImg = styled.img`
 
 const ScrollDown = styled.button`
   position: absolute;
-  bottom: 120px;
+  bottom: 90px;
   left: 137%;
   transform: translateX(-50%);
   background: none;

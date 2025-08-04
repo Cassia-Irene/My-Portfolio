@@ -29,7 +29,7 @@ const Intro = styled.p`
   font-weight: 500;
   color: #FFBB1B;
   position: relative;
-  left: 40%;
+  left: 30%;
 `;
 
 const Name = styled.h1`
@@ -39,7 +39,7 @@ const Name = styled.h1`
   letter-spacing: 8px;
   position: relative;
   margin-top: -23px;
-  left: 40%;
+  left: 24%;
 `;
 
 const IreneWrapper = styled.div`
@@ -48,7 +48,7 @@ const IreneWrapper = styled.div`
   gap: 11px;
   margin-top: -51px;
   position: relative;
-  left: 40%;
+  left: 24%;
 `;
 
 const Rectangle = styled.div`
@@ -71,7 +71,7 @@ const AboutArrowIcon = styled.img`
 const AboutButton = styled.button`
   display: flex;
   position: relative;
-  left: 56%;
+  left: 38%;
   align-items: center;
   background: transparent;
   padding: 10px 20px;
@@ -120,14 +120,14 @@ const CentralImg = styled.img`
   height: 535.96px;
   position: absolute;
   top: -10%;
-  left: 60%;
+  left: 50%;
   transform: translate(-50%, -50%);
   animation: float 5s ease-in-out infinite;
 `;
 
 const ScrollDown = styled.button`
   position: absolute;
-  bottom: 120px;
+  bottom: 85px;
   left: 137%;
   transform: translateX(-50%);
   background: none;
@@ -181,10 +181,10 @@ const Hero = () => {
       {/* Lado Direito */}
       <Right>
         <CentralImg src={centralImg} alt="Principal" />
-        <FloatingImg src={img1} top="-22%" left="45%" />
-        <FloatingImg src={img2} top="-35%" right="-65%" />
-        <FloatingImg src={img3} bottom="-50%" left="65%" />
-        <FloatingImg src={img4} bottom="-40%" right="-70%" />
+        <FloatingImg src={img1} top="-22%" left="35%" />
+        <FloatingImg src={img2} top="-35%" right="-55%" />
+        <FloatingImg src={img3} bottom="-50%" left="55%" />
+        <FloatingImg src={img4} bottom="-40%" right="-60%" />
       </Right>
 
       {/* Scroll Down */}

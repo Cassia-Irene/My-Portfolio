@@ -14,7 +14,6 @@ const HeaderContainer = styled.header`
 const Logo = styled.img`
     width: 95px;
     height: 76px;
-    
 `;
 
 const ContatoButton = styled.button`
@@ -41,7 +40,7 @@ const Header = () => {
   return (
     <HeaderContainer>
         <Logo src="/src/assets/logo.svg" alt="Logo" />
-      <ContatoButton>Contato</ContatoButton>
+      <ContatoButton>Contato</Button>
     </HeaderContainer>
   );
 };

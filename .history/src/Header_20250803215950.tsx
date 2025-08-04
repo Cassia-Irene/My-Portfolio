@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const HeaderContainer = styled.header`
     width: 100%;
-    position: fixed;
+    
     top: 30px;
     display: flex;
     justify-content: space-between;
@@ -14,7 +14,6 @@ const HeaderContainer = styled.header`
 const Logo = styled.img`
     width: 95px;
     height: 76px;
-    
 `;
 
 const ContatoButton = styled.button`

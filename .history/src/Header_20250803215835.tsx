@@ -14,7 +14,6 @@ const HeaderContainer = styled.header`
 const Logo = styled.img`
     width: 95px;
     height: 76px;
-    
 `;
 
 const ContatoButton = styled.button`

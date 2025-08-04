@@ -29,7 +29,7 @@ const Intro = styled.p`
   font-weight: 500;
   color: #FFBB1B;
   position: relative;
-  left: 40%;
+  left: 30%;
 `;
 
 const Name = styled.h1`
@@ -71,7 +71,7 @@ const AboutArrowIcon = styled.img`
 const AboutButton = styled.button`
   display: flex;
   position: relative;
-  left: 56%;
+  left: 46%;
   align-items: center;
   background: transparent;
   padding: 10px 20px;
@@ -127,7 +127,7 @@ const CentralImg = styled.img`
 
 const ScrollDown = styled.button`
   position: absolute;
-  bottom: 120px;
+  bottom: 85px;
   left: 137%;
   transform: translateX(-50%);
   background: none;

@@ -1,20 +1,23 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 
-const HeaderContainer = styled.header`
+const HeaderContainer = styled.header<{ isScrolled: boolean }>`
     width: 100%;
     position: fixed;
-    top: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 100px;
+    padding: 70px 100px;
+    z-index: 1000;
+    height: 100px;
+    background-color: ${({ isScrolled }) => (isScrolled ? "#00171F" : "transparent")};
+    transition: background-color 0.3s ease;
 }
 `;
 
 const Logo = styled.img`
     width: 95px;
     height: 76px;
-    
 `;
 
 const ContatoButton = styled.button`
@@ -38,8 +41,17 @@ const ContatoButton = styled.button`
 `;
 
 const Header = () => {
+   const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setIsScrolled(window.scrollY > 2);
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
   return (
-    <HeaderContainer>
+    <HeaderContainer isScrolled={isScrolled}>
         <Logo src="/src/assets/logo.svg" alt="Logo" />
       <ContatoButton>Contato</ContatoButton>
     </HeaderContainer>
