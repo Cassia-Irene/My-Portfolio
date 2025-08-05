@@ -5,7 +5,7 @@ import Hero from './Hero';
 import SidebarNavigation from "./SidebarNavigation";
 import ScrollButton from "./ScrollButton";
 import SobreMim from './SobreMim';
-import Skills from './Skills';
+impor
 
 const App: React.FC = () => {
 
@@ -17,8 +17,6 @@ const App: React.FC = () => {
       <ScrollButton />
       <Hero />
       <SobreMim />
-      <Skills />
-      {/* Add other sections here as needed */}
     </>
   );
 };

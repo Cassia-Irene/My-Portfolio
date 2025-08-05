@@ -8,7 +8,6 @@ const HeaderContainer = styled.header`
     justify-content: space-between;
     align-items: center;
     padding: 0 100px;
-      z-index: 1000;
 }
 `;
 
@@ -29,7 +28,7 @@ const ContatoButton = styled.button`
     font-size: 20px;
     cursor: pointer;
     transition: all 0.3s ease-out;
-
+    z
 
     &:hover {
         background-color: #FFBB1B;

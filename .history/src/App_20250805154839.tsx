@@ -17,8 +17,7 @@ const App: React.FC = () => {
       <ScrollButton />
       <Hero />
       <SobreMim />
-      <Skills />
-      {/* Add other sections here as needed */}
+      
     </>
   );
 };

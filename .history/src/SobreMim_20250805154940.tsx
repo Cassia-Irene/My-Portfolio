@@ -5,6 +5,7 @@ import lateralImg from "./assets/svg_lateral-2.svg"
 
 const SobremimSection = styled.section`
   height: 100vh;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -116,8 +117,9 @@ const LateralImg = styled.img`
   width: 334px;
   height: 278px;
   filter: blur(8px);
-  top: 186%;
+  bottom: -14%;
   right: -2.2%;
+  pointer-events: none;
   z-index: -1;
 `;
 

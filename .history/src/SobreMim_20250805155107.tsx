@@ -116,8 +116,9 @@ const LateralImg = styled.img`
   width: 334px;
   height: 278px;
   filter: blur(8px);
-  top: 186%;
+  top: -14%;
   right: -2.2%;
+  pointer-events: none;
   z-index: -1;
 `;
 

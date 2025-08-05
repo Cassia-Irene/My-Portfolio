@@ -8,7 +8,6 @@ const HeaderContainer = styled.header`
     justify-content: space-between;
     align-items: center;
     padding: 0 100px;
-      z-index: 1000;
 }
 `;
 
