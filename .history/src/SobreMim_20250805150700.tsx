@@ -1,15 +1,15 @@
 import styled from "styled-components";
 import Cerebro from "./assets/cerebro-sm.svg";
 import MyImg from "./assets/my-img.svg";
-import lateralImg from "./assets/svg_lateral-2.svg"
+import lateralImg from "<div className="" />
+<assets />
+<svg_lateral-2></svg_lateral-2>.svg"
 
 const SobremimSection = styled.section`
   height: 100vh;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
 `;
 
 const Title = styled.h2`
@@ -110,17 +110,6 @@ const ImageAndButton = styled.div`
   flex-direction: column;
   align-items: center;
   
-`;
-
-const LateralImg = styled.img`
-  position: absolute;
-  width: 334px;
-  height: 278px;
-  filter: blur(8px);
-  bottom: -14%;
-  right: -2.2%;
-  pointer-events: none;
-  z-index: -1;
 `;
 
 const SobreMim = () => {

@@ -120,7 +120,7 @@ const LateralImg = styled.img`
   bottom: -14%;
   right: -2.2%;
   pointer-events: none;
-  z-index: -1;
+  z-index: 0;
 `;
 
 const SobreMim = () => {

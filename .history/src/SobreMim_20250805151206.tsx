@@ -5,11 +5,9 @@ import lateralImg from "./assets/svg_lateral-2.svg"
 
 const SobremimSection = styled.section`
   height: 100vh;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
 `;
 
 const Title = styled.h2`
@@ -113,13 +111,12 @@ const ImageAndButton = styled.div`
 `;
 
 const LateralImg = styled.img`
-  position: absolute;
+position: relative;
   width: 334px;
   height: 278px;
   filter: blur(8px);
-  bottom: -14%;
-  right: -2.2%;
-  pointer-events: none;
+  top: 50%;
+  right: -1.2%;
   z-index: -1;
 `;
 

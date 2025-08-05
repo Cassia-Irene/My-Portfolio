@@ -17,7 +17,7 @@ const ScrollDown = styled.button<{ isBackToTop: boolean }>`
   font-weight: 500;
   white-space: nowrap;
   color: #ffbb1b;
-  z-index: 1000;
+  z
 
   transform: rotate(-90deg);
 

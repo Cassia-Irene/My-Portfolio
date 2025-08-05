@@ -15,6 +15,7 @@ const HeroSection = styled.section`
   align-items: center;
   padding: 0 122px;
   overflow: hidden;
+  position: relative;
 `;
 
 const Left = styled.div`

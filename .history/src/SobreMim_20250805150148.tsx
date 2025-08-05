@@ -1,15 +1,12 @@
 import styled from "styled-components";
 import Cerebro from "./assets/cerebro-sm.svg";
 import MyImg from "./assets/my-img.svg";
-import lateralImg from "./assets/svg_lateral-2.svg"
 
 const SobremimSection = styled.section`
   height: 100vh;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
 `;
 
 const Title = styled.h2`
@@ -77,7 +74,7 @@ const TextContent = styled.div`
     font-weight: 500;
     color: #F0F8FF;
     max-width: 100%;
-    letter-spacing: 1px;
+    letter-spacing: 0.2px;
   }
 
 `;
@@ -112,17 +109,6 @@ const ImageAndButton = styled.div`
   
 `;
 
-const LateralImg = styled.img`
-  position: absolute;
-  width: 334px;
-  height: 278px;
-  filter: blur(8px);
-  bottom: -14%;
-  right: -2.2%;
-  pointer-events: none;
-  z-index: -1;
-`;
-
 const SobreMim = () => {
 
   return (
@@ -148,7 +134,6 @@ const SobreMim = () => {
           <p>Fã de vôlei, animes (especialmente Haikyuu!!), videogames e, claro, de programar.</p>
         </TextContent>
       </MainContent>
-      <LateralImg src={lateralImg} alt="Imagem lateral" />
 
     </SobremimSection>
   );

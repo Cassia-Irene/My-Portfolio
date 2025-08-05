@@ -10,9 +10,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     overflow-x: hidden;
   }
-  ::-webkit-scrollbar {
-    width: 0px;
-  }
+
 
 `;
 

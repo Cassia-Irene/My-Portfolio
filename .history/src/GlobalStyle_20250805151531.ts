@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
   }
   ::-webkit-scrollbar {
-    width: 0px;
+    width: 2px;
   }
 
 `;

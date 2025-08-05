@@ -9,7 +9,6 @@ const SobremimSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
 `;
 
 const Title = styled.h2`
@@ -113,13 +112,13 @@ const ImageAndButton = styled.div`
 `;
 
 const LateralImg = styled.img`
+  display: flex;
   position: absolute;
   width: 334px;
   height: 278px;
   filter: blur(8px);
-  bottom: -14%;
+  top: 187%;
   right: -2.2%;
-  pointer-events: none;
   z-index: -1;
 `;
 
