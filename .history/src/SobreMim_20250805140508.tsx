@@ -40,15 +40,10 @@ const SubtitleWrapper = styled.div`
 const MainContent = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 130px;
+  gap: 100px;
   justify-content: center;
   align-items: flex-start;
   margin-top: 80px;
-  
-  a {
-  text-decoration: none;
-  }
-
 `;
 
 const LargeImage = styled.img`
@@ -80,7 +75,7 @@ const TextContent = styled.div`
 `;
 
 const Button = styled.button`
-  padding: 6px 40px;
+  padding: 10px 20px;
   margin-top: 40px;
   line-height: 1.6;
   background-color: transparent;
@@ -96,7 +91,7 @@ const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   &:hover {
     background-color: #FFBB1B;
   }
@@ -113,7 +108,7 @@ const SobreMim = () => {
 
   return (
     <SobremimSection id="section-01">
-    <Title>Sobre mim</Title>
+    <Title>Sobre Mim</Title>
      <SubtitleWrapper>
       <img src={Cerebro} alt="Cerebro Icon" />
         <p>Futura Engenheira de Software</p>
@@ -122,9 +117,7 @@ const SobreMim = () => {
          <MainContent>
         <ImageAndButton>
           <LargeImage src={MyImg} alt="Minha Foto" />
-          <a href="./public/curriculo.pdf" target="_blank" rel="noopener noreferrer">
           <Button>Ver Currículo</Button>
-          </a>
         </ImageAndButton>
 
         <TextContent>

@@ -44,11 +44,6 @@ const MainContent = styled.div`
   justify-content: center;
   align-items: flex-start;
   margin-top: 80px;
-  
-  a {
-  text-decoration: none;
-  }
-
 `;
 
 const LargeImage = styled.img`
@@ -96,6 +91,10 @@ const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  a {
+  text-decoration: none;
+  }
   
   &:hover {
     background-color: #FFBB1B;
@@ -113,7 +112,7 @@ const SobreMim = () => {
 
   return (
     <SobremimSection id="section-01">
-    <Title>Sobre mim</Title>
+    <Title>Sobre Mim</Title>
      <SubtitleWrapper>
       <img src={Cerebro} alt="Cerebro Icon" />
         <p>Futura Engenheira de Software</p>

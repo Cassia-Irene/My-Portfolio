@@ -40,15 +40,10 @@ const SubtitleWrapper = styled.div`
 const MainContent = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 130px;
+  gap: 100px;
   justify-content: center;
-  align-items: flex-start;
-  margin-top: 80px;
-  
-  a {
-  text-decoration: none;
-  }
-
+  align-items: center;
+  margin-top: 70px;
 `;
 
 const LargeImage = styled.img`
@@ -63,13 +58,10 @@ const TextContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-top: 10px;
 
   p {
     line-height: 1.5;
-    leter-spacing: 1px;
     font-family: "Inter", sans-serif;
-    text-align: justify;
     font-size: 20px;
     font-weight: 500;
     color: #F0F8FF;
@@ -80,7 +72,9 @@ const TextContent = styled.div`
 `;
 
 const Button = styled.button`
-  padding: 6px 40px;
+  width: 226px;
+  height: 50px;
+  padding: 30px 20px;
   margin-top: 40px;
   line-height: 1.6;
   background-color: transparent;
@@ -96,7 +90,7 @@ const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   &:hover {
     background-color: #FFBB1B;
   }
@@ -106,26 +100,24 @@ const ImageAndButton = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+  gap: 40px; /* espaçamento entre imagem e botão */
 `;
 
 const SobreMim = () => {
 
   return (
     <SobremimSection id="section-01">
-    <Title>Sobre mim</Title>
+    <Title>Sobre Mim</Title>
      <SubtitleWrapper>
       <img src={Cerebro} alt="Cerebro Icon" />
         <p>Futura Engenheira de Software</p>
       </SubtitleWrapper>
 
          <MainContent>
-        <ImageAndButton>
+        <div>
           <LargeImage src={MyImg} alt="Minha Foto" />
-          <a href="./public/curriculo.pdf" target="_blank" rel="noopener noreferrer">
           <Button>Ver Currículo</Button>
-          </a>
-        </ImageAndButton>
+        </div>
 
         <TextContent>
           <p>Apaixonada por desenvolvimento front-end e design, estou sempre em busca de aprender mais e transformar ideias em projetos reais.</p>

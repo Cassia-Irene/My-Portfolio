@@ -48,7 +48,6 @@ const MainContent = styled.div`
   a {
   text-decoration: none;
   }
-
 `;
 
 const LargeImage = styled.img`
@@ -113,7 +112,7 @@ const SobreMim = () => {
 
   return (
     <SobremimSection id="section-01">
-    <Title>Sobre mim</Title>
+    <Title>Sobre Mim</Title>
      <SubtitleWrapper>
       <img src={Cerebro} alt="Cerebro Icon" />
         <p>Futura Engenheira de Software</p>
