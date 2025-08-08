@@ -19,7 +19,7 @@ const App: React.FC = () => {
       <Hero />
       <SobreMim />
       <Skills />
-      <Projetos/>
+      {/* Add other sections here as needed */}
     </>
   );
 };

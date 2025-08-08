@@ -6,7 +6,7 @@ import SidebarNavigation from "./SidebarNavigation";
 import ScrollButton from "./ScrollButton";
 import SobreMim from './SobreMim';
 import Skills from './Skills';
-import Projetos from "./Projetos";
+import 
 
 const App: React.FC = () => {
 
@@ -19,7 +19,7 @@ const App: React.FC = () => {
       <Hero />
       <SobreMim />
       <Skills />
-      <Projetos/>
+      {/* Add other sections here as needed */}
     </>
   );
 };
