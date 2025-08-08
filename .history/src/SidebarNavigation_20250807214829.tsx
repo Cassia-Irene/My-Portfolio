@@ -45,30 +45,7 @@ const SidebarNavigation = () => {
     }
   };
 
-  return (
-    <SidebarContainer>
-      <DotsWrapper>
-        <Line />
-        <ActiveBar ref={barRef} />
-        <Dots>
-          {sections.map((id, index) => (
-            <Dot
-              key={id}
-              onClick={() => handleClick(id)}
-              isActive={activeIndex === index}
-            >
-              {id}
-            </Dot>
-          ))}
-        </Dots>
-      </DotsWrapper>
-    </SidebarContainer>
-  );
-};
-
-export default SidebarNavigation;
-
-const SidebarContainer = styled.div`
+  const SidebarContainer = styled.div`
   position: fixed;
   top: 35%;
   left: 93%;
@@ -122,3 +99,26 @@ const Dot = styled.button<{ isActive: boolean }>`
     color: #ffbb1b;
   }
 `;
+
+  return (
+    <SidebarContainer>
+      <DotsWrapper>
+        <Line />
+        <ActiveBar ref={barRef} />
+        <Dots>
+          {sections.map((id, index) => (
+            <Dot
+              key={id}
+              onClick={() => handleClick(id)}
+              isActive={activeIndex === index}
+            >
+              {id}
+            </Dot>
+          ))}
+        </Dots>
+      </DotsWrapper>
+    </SidebarContainer>
+  );
+};
+
+export default SidebarNavigation;

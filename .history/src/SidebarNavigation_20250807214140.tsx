@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 
+// IDs padronizados com dois dígitos
 const sections = ["00", "01", "02", "03", "04"];
 
 const SidebarNavigation = () => {

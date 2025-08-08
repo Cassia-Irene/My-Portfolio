@@ -72,10 +72,9 @@ const AboutButton = styled.button`
   display: flex;
   position: relative;
   left: 56%;
+  wid: 50px;
   align-items: center;
   background: transparent;
-  padding: 10px 5px;
-  width: 172px;
   cursor: pointer;
   border: none;
   font-family: "Inter", sans-serif;

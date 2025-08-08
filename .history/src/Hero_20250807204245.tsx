@@ -14,7 +14,7 @@ const HeroSection = styled.section`
   justify-content: space-between;
   align-items: center;
   padding: 0 122px;
-`;
+  
 
 const Left = styled.div`
   display: flex;
@@ -74,8 +74,7 @@ const AboutButton = styled.button`
   left: 56%;
   align-items: center;
   background: transparent;
-  padding: 10px 5px;
-  width: 172px;
+  padding: 10px 20px;
   cursor: pointer;
   border: none;
   font-family: "Inter", sans-serif;

@@ -5,6 +5,7 @@ const sections = ["00", "01", "02", "03", "04"];
 
 const SidebarNavigation = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [hoverIndex, setHoverIndex] = useState<number | null>(null);
   const barRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -12,19 +13,16 @@ const SidebarNavigation = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const id = entry.target.id.split("-")[1];
-            const index = sections.indexOf(id);
-            if (index !== -1) {
-              setActiveIndex(index);
-            }
+            const index = Number(entry.target.id.split("-")[1]);
+            setActiveIndex(index);
           }
         });
       },
       { threshold: 0.6 }
     );
 
-    sections.forEach((id) => {
-      const el = document.getElementById(`section-${id}`);
+    sections.forEach((_, index) => {
+      const el = document.getElementById(`section-${index}`);
       if (el) observer.observe(el);
     });
 
@@ -33,40 +31,20 @@ const SidebarNavigation = () => {
 
   useEffect(() => {
     const heightPerItem = 54;
+    const targetIndex = hoverIndex !== null ? hoverIndex : activeIndex;
+
     if (barRef.current) {
-      barRef.current.style.transform = `translateY(${activeIndex * heightPerItem}px)`;
+      barRef.current.style.transform = `translateY(${targetIndex * heightPerItem}px)`;
     }
-  }, [activeIndex]);
+  }, [activeIndex, hoverIndex]);
 
-  const handleClick = (id: string) => {
-    const target = document.getElementById(`section-${id}`);
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  return (
-    <SidebarContainer>
-      <DotsWrapper>
-        <Line />
-        <ActiveBar ref={barRef} />
-        <Dots>
-          {sections.map((id, index) => (
-            <Dot
-              key={id}
-              onClick={() => handleClick(id)}
-              isActive={activeIndex === index}
-            >
-              {id}
-            </Dot>
-          ))}
-        </Dots>
-      </DotsWrapper>
-    </SidebarContainer>
-  );
+const handleClick = (index: number) => {
+  const paddedId = index.toString().padStart(2, "0");
+  const target = document.getElementById(`section-${paddedId}`);
+  if (target) {
+    target.scrollIntoView({ behavior: "smooth" });
+  }
 };
-
-export default SidebarNavigation;
 
 const SidebarContainer = styled.div`
   position: fixed;
@@ -75,6 +53,7 @@ const SidebarContainer = styled.div`
   width: 50px;
   z-index: 1000;
 `;
+
 
 const DotsWrapper = styled.div`
   display: flex;
@@ -109,16 +88,39 @@ const Dot = styled.button<{ isActive: boolean }>`
   height: 54px;
   background: none;
   border: none;
-  color: ${(props) => (props.isActive ? "#ffbb1b" : "#FFFFFF")};
+  color: #FFFFFF;
   font-size: 14px;
   font-family: "Racing Sans One", sans-serif;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  transition: color 0.3s;
 
   &:hover {
     color: #ffbb1b;
-  }
 `;
+
+  return (
+    <SidebarContainer>
+      <DotsWrapper>
+        <Line />
+        <ActiveBar ref={barRef} />
+        <Dots>
+          {sections.map((index) => (
+          <Dot
+            key={index}
+            onClick={() => handleClick(index)}
+            onMouseEnter={() => setHoverIndex(index)}
+            onMouseLeave={() => setHoverIndex(null)}
+            isActive={activeIndex === index}
+          >
+            {index.toString().padStart(2, "0")}
+          </Dot>
+        ))}
+        </Dots>
+      </DotsWrapper>
+    </SidebarContainer>
+  );
+};
+
+export default SidebarNavigation;

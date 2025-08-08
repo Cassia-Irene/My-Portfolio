@@ -54,7 +54,7 @@ const LinkedinLink = styled.a`
 `;
 
 const GridWrapper = styled.div`
-  margin-top: 52px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   gap: 38px;
@@ -78,7 +78,6 @@ const SkillText = styled.p`
   font-family: "Inter", sans-serif;
   color: #FFFFFF;
   font-size: 20px;
-  font-weight: 500;
   text-align: center;
 `;
 

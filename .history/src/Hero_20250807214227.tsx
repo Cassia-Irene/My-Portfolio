@@ -74,8 +74,7 @@ const AboutButton = styled.button`
   left: 56%;
   align-items: center;
   background: transparent;
-  padding: 10px 5px;
-  width: 172px;
+
   cursor: pointer;
   border: none;
   font-family: "Inter", sans-serif;

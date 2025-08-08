@@ -54,31 +54,30 @@ const LinkedinLink = styled.a`
 `;
 
 const GridWrapper = styled.div`
-  margin-top: 52px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
-  gap: 38px;
+  gap: 40px;
 `;
 
 const GridRow = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 130px;
+  gap: 20px;
   text-align: center;
 `;
 
 const SkillImage = styled.img`
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
   margin: 0 auto;
 `;
 
 const SkillText = styled.p`
   font-family: "Inter", sans-serif;
-  color: #FFFFFF;
-  font-size: 20px;
-  font-weight: 500;
+  color: #F0F8FF;
+  font-size: 16px;
   text-align: center;
 `;
 
@@ -93,32 +92,6 @@ const Skills = () => {
           <p>Possuo conhecimento em desenvolvimento front-end, com familiaridade em HTML, CSS e Javascript. Estou em fase de aprendizado e desenvolvimento de habilidades na criação de aplicações web avançadas, incluindo o desenvolvimento de layouts interativos e personalizados. Utilizo o Figma para design UI/UX e possuo conhecimentos básicos em Python. Atualmente, estou expandindo meu aprendizado com o estudo de React.</p>
           <p>Visite meu <LinkedinLink href="https://www.linkedin.com/in/cassia-irene/" target="_blank" rel="noopener noreferrer">Linkedin</LinkedinLink> para mais detalhes.</p>
         </TextContent>
-
-        <GridWrapper>
-          {/* Primeira linha de skills */}
-          <GridRow>
-            <SkillImage src="/src/assets/svg_skills1.svg" alt="CSS 3" />
-            <SkillImage src="/src/assets/svg_skills2.svg" alt="Figma" />
-            <SkillImage src="/src/assets/svg_skills3.svg" alt="HTML 5" />
-          </GridRow>
-          <GridRow>
-            <SkillText>CSS 3</SkillText>
-            <SkillText>Figma</SkillText>
-            <SkillText>HTML 5</SkillText>
-          </GridRow>
-
-          {/* Segunda linha de skills */}
-          <GridRow>
-            <SkillImage src="/src/assets/svg_skills4.svg" alt="Python" />
-            <SkillImage src="/src/assets/svg_skills5.svg" alt="Figma" />
-            <SkillImage src="/src/assets/svg_skills6.svg" alt="Visual Studio" />
-          </GridRow>
-          <GridRow>
-            <SkillText>Python</SkillText>
-            <SkillText>JavaScript</SkillText>
-            <SkillText>Visual Studio</SkillText>
-          </GridRow>
-        </GridWrapper>
 
     </SectionSkills>
   );

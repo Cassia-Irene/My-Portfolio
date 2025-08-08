@@ -14,6 +14,7 @@ const HeroSection = styled.section`
   justify-content: space-between;
   align-items: center;
   padding: 0 122px;
+  overflow: hidden;
 `;
 
 const Left = styled.div`
@@ -74,14 +75,13 @@ const AboutButton = styled.button`
   left: 56%;
   align-items: center;
   background: transparent;
-  padding: 10px 5px;
-  width: 172px;
+  padding: 10px 20px;
   cursor: pointer;
   border: none;
   font-family: "Inter", sans-serif;
   font-size: 25px;
   font-weight: 500;
-  color: #ffbb1b;
+  color: #ac8d46ff;
 
   
   &:hover ${AboutArrowIcon} {
@@ -148,14 +148,7 @@ const Hero = () => {
           <Rectangle />
           <Irene>Irene</Irene>
         </IreneWrapper>
-        <AboutButton
-            onClick={() => {
-            const section = document.getElementById("section-01");
-            if (section) {
-              section.scrollIntoView({ behavior: "smooth" });
-            }
-          }}
-        >
+        <AboutButton>
           Sobre mim <AboutArrowIcon src={ArrowRight} alt="Seta para a direita" />
         </AboutButton>
         <LateralImg src={lateralImg} alt="Imagem lateral" />
