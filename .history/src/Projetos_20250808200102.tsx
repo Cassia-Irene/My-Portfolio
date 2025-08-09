@@ -24,10 +24,6 @@ const Carousel = styled.div`
   overflow-x: auto;
   padding: 20px;
   scroll-behavior: smooth;
-  width: 100%;
-  max-width: 100%;
-  white-space: nowrap;
-  justify-content: center;
 
   &::-webkit-scrollbar {
     display: none;
@@ -142,17 +138,7 @@ const Projetos = () => {
       logo: "/imagens/logo3.png",
       descricao: "Breve descrição do projeto 3.",
       tipo: "Trabalho acadêmico."
-    },
-
-    {
-      nome: "Musik",
-      link: "https://example.com",
-      imagem: "/imagens/projeto3.jpg",
-      logo: "/imagens/logo3.png",
-      descricao: "Breve descrição do projeto 3.",
-      tipo: "Trabalho acadêmico."
-    },
-    
+    }
   ];
 
   return (
@@ -173,8 +159,8 @@ const Projetos = () => {
                   width: "50px",
                   height: 
                   proj.nome === "Recriação do IFOOD" ? "26px" :
-                  proj.nome === "IEM Games" ? "50px" :
-                  proj.nome === "Musik" ? "50px" :
+                  proj.nome === "IEM Games" ? "56px" :
+                  proj.nome === "Musik" ? "56px" :
                   "auto",
                 }}
                 

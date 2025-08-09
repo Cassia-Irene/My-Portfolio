@@ -24,10 +24,6 @@ const Carousel = styled.div`
   overflow-x: auto;
   padding: 20px;
   scroll-behavior: smooth;
-  width: 100%;
-  max-width: 100%;
-  white-space: nowrap;
-  justify-content: center;
 
   &::-webkit-scrollbar {
     display: none;
@@ -85,6 +81,11 @@ const ProjectHeader = styled.div`
   margin-top: 40px;
   margin-bottom: 20px;
 
+  img {
+    width: 50px;
+    height: 26px;
+  }
+
   h3 {
     font-size: 25px;
     font-family: "Racing Sans One", sans-serif;
@@ -109,12 +110,12 @@ const WorkType = styled.span`
   font-size: 20px;
   font-weight: 500;
   font-family: "Inter", sans-serif;
-  color: #56C9F4;
+  color: #FFFFFF;
   text-align: justify;
   font-style: italic;
   line-height: 1.4;
   letter-spacing: 0.2px;
-  margin-top: 15px;
+  margin: 0;
 `;
 
 const Projetos = () => {
@@ -128,31 +129,21 @@ const Projetos = () => {
       tipo: "Trabalho acadêmico."
     },
     {
-      nome: "IEM Games",
+      nome: "Projeto 2",
       link: "https://example.com",
-      imagem: "/src/assets/projetos_iem-games.svg",
-      logo: "/src/assets/projetos_iem-games-logo.svg",
-      descricao: "Landing page estática para uma plataforma de jogos, com design moderno e navegação intuitiva.",
+      imagem: "/imagens/projeto2.jpg",
+      logo: "/imagens/logo2.png",
+      descricao: "Breve descrição do projeto 2.",
       tipo: "Trabalho acadêmico."
     },
     {
-      nome: "Musik",
+      nome: "Projeto 3",
       link: "https://example.com",
       imagem: "/imagens/projeto3.jpg",
       logo: "/imagens/logo3.png",
       descricao: "Breve descrição do projeto 3.",
       tipo: "Trabalho acadêmico."
-    },
-
-    {
-      nome: "Musik",
-      link: "https://example.com",
-      imagem: "/imagens/projeto3.jpg",
-      logo: "/imagens/logo3.png",
-      descricao: "Breve descrição do projeto 3.",
-      tipo: "Trabalho acadêmico."
-    },
-    
+    }
   ];
 
   return (
@@ -166,21 +157,7 @@ const Projetos = () => {
             </ImageWrapper>
             <CardContent>
               <ProjectHeader>
-                <img src={proj.logo} 
-                alt={`Logo ${proj.nome}`} 
-                
-                style={{
-                  width: "50px",
-                  height: 
-                  proj.nome === "Recriação do IFOOD" ? "26px" :
-                  proj.nome === "IEM Games" ? "50px" :
-                  proj.nome === "Musik" ? "50px" :
-                  "auto",
-                }}
-                
-              
-                
-                />
+                <img src={proj.logo} alt={`Logo ${proj.nome}`} />
                 <h3>{proj.nome}</h3>
               </ProjectHeader>
               <Description>{proj.descricao}</Description>

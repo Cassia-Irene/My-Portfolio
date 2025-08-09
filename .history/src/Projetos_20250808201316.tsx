@@ -118,6 +118,8 @@ const WorkType = styled.span`
 `;
 
 const Projetos = () => {
+
+  
   const projetos = [
     {
       nome: "Recriação do IFOOD",

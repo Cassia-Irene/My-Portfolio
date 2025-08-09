@@ -24,10 +24,6 @@ const Carousel = styled.div`
   overflow-x: auto;
   padding: 20px;
   scroll-behavior: smooth;
-  width: 100%;
-  max-width: 100%;
-  white-space: nowrap;
-  justify-content: center;
 
   &::-webkit-scrollbar {
     display: none;
@@ -151,7 +147,7 @@ const Projetos = () => {
       logo: "/imagens/logo3.png",
       descricao: "Breve descrição do projeto 3.",
       tipo: "Trabalho acadêmico."
-    },
+    }
     
   ];
 

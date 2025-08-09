@@ -153,6 +153,14 @@ const Projetos = () => {
       tipo: "Trabalho acadêmico."
     },
     
+        {
+      nome: "Musik",
+      link: "https://example.com",
+      imagem: "/imagens/projeto3.jpg",
+      logo: "/imagens/logo3.png",
+      descricao: "Breve descrição do projeto 3.",
+      tipo: "Trabalho acadêmico."
+    },
   ];
 
   return (

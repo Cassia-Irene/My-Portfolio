@@ -118,6 +118,19 @@ const WorkType = styled.span`
 `;
 
 const Projetos = () => {
+
+    const carouselRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: "left" | "right") => {
+    if (carouselRef.current) {
+      const scrollAmount = 370; // largura do card + gap, ajuste se precisar
+      if (direction === "left") {
+        carouselRef.current.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+      } else {
+        carouselRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      }
+    }
+
   const projetos = [
     {
       nome: "Recriação do IFOOD",
@@ -165,6 +178,8 @@ const Projetos = () => {
               <img src={proj.imagem} alt={proj.nome} />
             </ImageWrapper>
             <CardContent>
+              
+              
               <ProjectHeader>
                 <img src={proj.logo} 
                 alt={`Logo ${proj.nome}`} 

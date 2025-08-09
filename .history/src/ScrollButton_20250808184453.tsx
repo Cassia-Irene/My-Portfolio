@@ -64,7 +64,7 @@ const ScrollButton = () => {
         </>
       ) : (
         <>
-          <img src={ArrowDown} alt="Descer" /> Descer
+          <img src={ArrowDown} alt="Scroll Down" /> Rolar para baixo
         </>
       )}
     </ScrollDown>

@@ -153,6 +153,7 @@ const Projetos = () => {
       tipo: "Trabalho acadêmico."
     },
     
+    
   ];
 
   return (

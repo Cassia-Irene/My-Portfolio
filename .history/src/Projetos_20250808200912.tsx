@@ -24,10 +24,7 @@ const Carousel = styled.div`
   overflow-x: auto;
   padding: 20px;
   scroll-behavior: smooth;
-  width: 100%;
-  max-width: 100%;
-  white-space: nowrap;
-  justify-content: center;
+  wi
 
   &::-webkit-scrollbar {
     display: none;

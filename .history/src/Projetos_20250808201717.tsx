@@ -118,6 +118,19 @@ const WorkType = styled.span`
 `;
 
 const Projetos = () => {
+
+    const scroll = (direction: "left" | "right") => {
+    if (carouselRef.current) {
+      const scrollAmount = 370; // largura do card + gap, ajuste se precisar
+      if (direction === "left") {
+        carouselRef.current.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+      } else {
+        carouselRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      }
+    }
+
+  };
+
   const projetos = [
     {
       nome: "Recriação do IFOOD",
@@ -158,6 +171,15 @@ const Projetos = () => {
   return (
     <SectionProjetos id="section-03">
       <Title>Projetos</Title>
+
+      <div style={{ position: "relative", width: "100vw", maxWidth: "100%" }}>
+        <button
+          onClick={() => scroll("left")}
+          style={{ position: "absolute", left: 0, top: "50%", zIndex: 10 }}
+        >
+          {"<"}
+        </button>
+
       <Carousel>
         {projetos.map((proj, index) => (
           <Card key={index}>

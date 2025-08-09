@@ -152,6 +152,8 @@ const Projetos = () => {
       descricao: "Breve descrição do projeto 3.",
       tipo: "Trabalho acadêmico."
     },
+
+    
     
   ];
 
