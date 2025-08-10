@@ -42,16 +42,10 @@ const Header = () => {
   return (
     <HeaderContainer>
         <Logo src="/src/assets/logo.svg" alt="Logo" />
-        <ContatoButton
-            onClick={() => {
-            const section = document.getElementById("section-04");
-            if (section) {
-              section.scrollIntoView({ behavior: "smooth" });
-            }
-          }}
-        >
-          Contatos
-        </ContatoButton>
+
+
+        
+      <ContatoButton>Contatos</ContatoButton>
     </HeaderContainer>
   );
 };

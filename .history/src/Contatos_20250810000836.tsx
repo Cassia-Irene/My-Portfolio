@@ -1,0 +1,49 @@
+import styled from "styled-components";
+
+const SectionContatos = styled.section`
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  
+`;
+
+const Title = styled.h2`
+  font-size: 72px;
+  font-family: "Racing Sans One", sans-serif;
+  color: #FFBB1B;
+  letter-spacing: 4px;
+  margin-top: 120px;
+  margin-bottom: 45px;
+  justify-content: center;
+  text-align: center;
+  
+`;
+
+const SubtitleWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  p {
+    font-family: "Racing Sans One", sans-serif;
+    font-size: 35px;
+    color: #00A3FF;
+  }
+`;
+
+
+const Contatos = () => {
+
+  return (
+    <SectionContatos id="section-04">
+    <Title>Contato</Title>
+     <SubtitleWrapper>
+        <p>Futura Engenheira de Software</p>
+      </SubtitleWrapper>
+    </SectionContatos>
+  );
+};
+
+export default Contatos;

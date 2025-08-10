@@ -7,7 +7,7 @@ import ScrollButton from "./ScrollButton";
 import SobreMim from './SobreMim';
 import Skills from './Skills';
 import Projetos from "./Projetos";
-import Contatos from "./Contatos";
+import Contatos from "./"
 
 const App: React.FC = () => {
 
@@ -21,7 +21,6 @@ const App: React.FC = () => {
       <SobreMim />
       <Skills />
       <Projetos/>
-      <Contatos />
     </>
   );
 };

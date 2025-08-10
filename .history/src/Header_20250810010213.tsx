@@ -44,14 +44,15 @@ const Header = () => {
         <Logo src="/src/assets/logo.svg" alt="Logo" />
         <ContatoButton
             onClick={() => {
-            const section = document.getElementById("section-04");
+            const section = document.getElementById("section-01");
             if (section) {
               section.scrollIntoView({ behavior: "smooth" });
             }
           }}
         >
-          Contatos
+          Sobre mim
         </ContatoButton>
+      <ContatoButton>Contatos</ContatoButton>
     </HeaderContainer>
   );
 };

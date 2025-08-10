@@ -42,16 +42,17 @@ const Header = () => {
   return (
     <HeaderContainer>
         <Logo src="/src/assets/logo.svg" alt="Logo" />
-        <ContatoButton
+                <AboutButton
             onClick={() => {
-            const section = document.getElementById("section-04");
+            const section = document.getElementById("section-01");
             if (section) {
               section.scrollIntoView({ behavior: "smooth" });
             }
           }}
         >
-          Contatos
-        </ContatoButton>
+          Sobre mim <AboutArrowIcon src={ArrowRight} alt="Seta para a direita" />
+        </AboutButton>
+      <ContatoButton>Contatos</ContatoButton>
     </HeaderContainer>
   );
 };

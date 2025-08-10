@@ -21,7 +21,6 @@ const App: React.FC = () => {
       <SobreMim />
       <Skills />
       <Projetos/>
-      <Contatos />
     </>
   );
 };

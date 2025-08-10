@@ -28,7 +28,7 @@ const ContatoButton = styled.button`
     font-weight: 500;
     font-size: 20px;
     cursor: pointer;
-    transition: all 0.3s ease-out;
+    transition: all 3s ease-out;
 
 
     &:hover {
