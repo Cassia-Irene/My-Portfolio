@@ -82,8 +82,8 @@ const SocialButton = styled.a< {
   }
 
   &:hover {
-    background: ${({ hoverBg }) => hoverBg};
-    border-color: transparent; /* evita conflito visual */
+    background-color: ${({ hoverBg }) => hoverColor};
+    border-color: ${({ hoverBg }) => hoverColor};
     box-shadow: 0 0 15px ${({ glowColor }) => glowColor};
   }
 
@@ -114,8 +114,8 @@ const Contatos = () => {
 
         <SocialButton
           href="mailto:seuemail@example.com"
-          hoverBg="#C5221F"
-          glowColor="linear-gradient(90deg, #4285F4 0%, #C5221F 25%, #EA4335 50%, #FBBC04 75%, #34A853 100%)"
+          hoverBg="linear-gradient(90deg, #4285F4 0%, #C5221F 25%, #EA4335 50%, #FBBC04 75%, #34A853 100%)"
+          glowColor="rgba(234, 67, 53, 0.8)"
         >
           <img src="/src/assets/contatos-email.svg" alt="Email" />
         </SocialButton>
@@ -135,7 +135,7 @@ const Contatos = () => {
           target="_blank"
           rel="noopener noreferrer"
           hoverBg="linear-gradient(90deg, #FEC053 0%, #F2203E 33%, #B729A8 65%, #5342D6 100%)"
-           glowColor="linear-gradient(90deg, #FEC053 0%, #F2203E 33%, #B729A8 65%, #5342D6 100%)"
+           glowColor="rgba(225, 48, 108, 0.8)"
         >
           <img src="/src/assets/contatos-instagram.svg" alt="Instagram" />
         </SocialButton>

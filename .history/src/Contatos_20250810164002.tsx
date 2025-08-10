@@ -114,7 +114,7 @@ const Contatos = () => {
 
         <SocialButton
           href="mailto:seuemail@example.com"
-          hoverBg="#C5221F"
+          hoverBg="linear-gradient(90deg, #4285F4 0%, #C5221F 25%, #EA4335 50%, #FBBC04 75%, #34A853 100%)"
           glowColor="linear-gradient(90deg, #4285F4 0%, #C5221F 25%, #EA4335 50%, #FBBC04 75%, #34A853 100%)"
         >
           <img src="/src/assets/contatos-email.svg" alt="Email" />
