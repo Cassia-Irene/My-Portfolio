@@ -6,7 +6,7 @@ const SectionProjetos = styled.section`
   position: relative;
   display: flex;
   flex-direction: column;
-  
+  align-items: center;
 `;
 
 const Title = styled.h2`
@@ -15,18 +15,14 @@ const Title = styled.h2`
   color: #FFBB1B;
   letter-spacing: 4px;
   margin-top: 120px;
-  margin-bottom: 45px;
-  justify-content: center;
-  text-align: center;
+  margin-bottom: 30px;
   
 `;
 
 const FilterWrapper = styled.div`
   display: flex;
   gap: 12px;
-  display: flex;
-  position: relative;
-  left: 20%;
+
 `;
 
 const FilterButton= styled.button<{ active: boolean }>`
@@ -37,8 +33,10 @@ const FilterButton= styled.button<{ active: boolean }>`
   border: 2px solid #FFBB1B;
   border-radius: 8px;
   font-family: "Inter", sans-serif;
+  margin-bottom: 20px;
   cursor: pointer;
   transition: 0.3s;
+  justify-content: start;
 
   &:hover {
     background: #e6a919;
@@ -54,7 +52,8 @@ const Carousel = styled.div`
   scroll-behavior: smooth;
   width: 100%;
   max-width: 62%;
-  align-self: center;
+  justify-content: start;
+  align-items: center;
 
   &::-webkit-scrollbar {
     display: none;
@@ -72,13 +71,13 @@ const Card = styled.div`
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  margin-top: 5px;
+  margin-top: 10px;
 `;
 
 const ImageWrapper = styled.a`
   position: relative;
   width: 350px;
-  height: 246px;
+  height: 248.5;
   overflow: hidden;
   cursor: pointer;
 
@@ -108,8 +107,8 @@ const ProjectHeader = styled.div`
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin-top: 25px;
-  margin-bottom: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
 
   img {
     width: 50px;
@@ -150,7 +149,7 @@ const WorkType = styled.span`
 `;
 
 const ArrowWrapper = styled.div`
-  margin-top: 15px;
+  margin-top: 40px;
   display: flex;
   gap: 30px;
   justify-content: center;

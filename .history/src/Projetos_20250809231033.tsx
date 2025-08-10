@@ -15,7 +15,7 @@ const Title = styled.h2`
   color: #FFBB1B;
   letter-spacing: 4px;
   margin-top: 120px;
-  margin-bottom: 45px;
+  margin-bottom: 50px;
   justify-content: center;
   text-align: center;
   
@@ -78,7 +78,7 @@ const Card = styled.div`
 const ImageWrapper = styled.a`
   position: relative;
   width: 350px;
-  height: 246px;
+  height: 248.5;
   overflow: hidden;
   cursor: pointer;
 
@@ -108,8 +108,8 @@ const ProjectHeader = styled.div`
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin-top: 25px;
-  margin-bottom: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
 
   img {
     width: 50px;

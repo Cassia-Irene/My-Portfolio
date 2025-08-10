@@ -78,7 +78,7 @@ const Card = styled.div`
 const ImageWrapper = styled.a`
   position: relative;
   width: 350px;
-  height: 246px;
+  height: 246;
   overflow: hidden;
   cursor: pointer;
 

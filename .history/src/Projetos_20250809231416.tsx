@@ -78,7 +78,7 @@ const Card = styled.div`
 const ImageWrapper = styled.a`
   position: relative;
   width: 350px;
-  height: 246px;
+  height: 248.5;
   overflow: hidden;
   cursor: pointer;
 
@@ -109,7 +109,7 @@ const ProjectHeader = styled.div`
   justify-content: center;
   gap: 10px;
   margin-top: 25px;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
 
   img {
     width: 50px;

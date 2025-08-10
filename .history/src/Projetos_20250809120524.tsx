@@ -1,4 +1,3 @@
-import { useRef, useState } from "react";
 import styled from "styled-components";
 
 const SectionProjetos = styled.section`
@@ -6,7 +5,7 @@ const SectionProjetos = styled.section`
   position: relative;
   display: flex;
   flex-direction: column;
-  
+  align-items: center;
 `;
 
 const Title = styled.h2`
@@ -15,46 +14,21 @@ const Title = styled.h2`
   color: #FFBB1B;
   letter-spacing: 4px;
   margin-top: 120px;
-  margin-bottom: 45px;
-  justify-content: center;
-  text-align: center;
+  margin-bottom: 14px;
   
-`;
-
-const FilterWrapper = styled.div`
-  display: flex;
-  gap: 12px;
-  display: flex;
-  position: relative;
-  left: 20%;
-`;
-
-const FilterButton= styled.button<{ active: boolean }>`
-  background: ${({ active }) => (active ? "#FFBB1B" : "transparent")};
-  color: #FFFFFF;
-  font-size: 18px;
-  padding: 8px 14px;
-  border: 2px solid #FFBB1B;
-  border-radius: 8px;
-  font-family: "Inter", sans-serif;
-  cursor: pointer;
-  transition: 0.3s;
-
-  &:hover {
-    background: #e6a919;
-  }
-
 `;
 
 const Carousel = styled.div`
   display: flex;
-  gap: 30px;
+  gap: 20px;
   overflow-x: auto;
   padding: 20px;
   scroll-behavior: smooth;
   width: 100%;
-  max-width: 62%;
-  align-self: center;
+  max-width: 100%;
+  white-space: nowrap;
+  justify-content: center;
+  
 
   &::-webkit-scrollbar {
     display: none;
@@ -72,13 +46,13 @@ const Card = styled.div`
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  margin-top: 5px;
+  margin-top: 50px;
 `;
 
 const ImageWrapper = styled.a`
   position: relative;
   width: 350px;
-  height: 246px;
+  height: 248.5;
   overflow: hidden;
   cursor: pointer;
 
@@ -101,6 +75,7 @@ const CardContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
+  color: #fff;
 `;
 
 const ProjectHeader = styled.div`
@@ -108,14 +83,8 @@ const ProjectHeader = styled.div`
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin-top: 25px;
-  margin-bottom: 10px;
-
-  img {
-    width: 50px;
-    height: 56px;
-    object-fit: contain;
-  }
+  margin-top: 40px;
+  margin-bottom: 20px;
 
   h3 {
     font-size: 25px;
@@ -149,119 +118,70 @@ const WorkType = styled.span`
   margin-top: 15px;
 `;
 
-const ArrowWrapper = styled.div`
-  margin-top: 15px;
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-`;
-
-const ArrowButton = styled.div`
-  background: transparent;
-  border: solid 2px #FFBB1B;
-  padding: 12px 14px;
-  border-radius: 50%;
-  font-size: 10px;
-  cursor: pointer;
-  transition: background 0.2s ease;
-
-  img {
-    width: 25px;
-    height: auto;
-  }
-
-  &:hover {
-  background: #e6a919;
-  }
-`;
-
 const Projetos = () => {
-  const carouselRef = useRef<HTMLDivElement>(null);
-  const [filtro, setFiltro] = useState("Todos");
-
-  const scroll = (direction: "left" | "right") => {
-    if (carouselRef.current) {
-      const scrollAmount = 370;
-      carouselRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount,
-        behavior: "smooth",
-      });
-    }
-  };
-  
-  
   const projetos = [
     {
       nome: "Recriação do IFOOD",
-      categoria: "Design",
       link: "https://www.figma.com/proto/nUuJj1rOCC76iw6qILdZ6z/IEMGAMES?node-id=121-427&node-type=CANVAS&t=ijGoINF4dtZrPuml-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=121%3A427",
       imagem: "/src/assets/projetos_ifood.svg",
       logo: "/src/assets/projetos_ifood-logo.svg",
       descricao: "Nova proposta visual para o site do iFood, focando em organização e modernização da interface.",
-      tipo: "Trabalho escolar."
+      tipo: "Trabalho acadêmico."
     },
     {
       nome: "IEM Games",
-      categoria: "Design",
-      link: "https://www.figma.com/proto/nUuJj1rOCC76iw6qILdZ6z/IEMGAMES?node-id=121-427&node-type=CANVAS&t=ijGoINF4dtZrPuml-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=121%3A427",
+      link: "https://example.com",
       imagem: "/src/assets/projetos_iem-games.svg",
       logo: "/src/assets/projetos_iem-games-logo.svg",
       descricao: "Landing page estática para uma plataforma de jogos, com design moderno e navegação intuitiva.",
-      tipo: "Trabalho escolar."
+      tipo: "Trabalho acadêmico."
     },
     {
       nome: "Musik",
-      categoria: "Design",
       link: "https://example.com",
       imagem: "/src/assets/projetos_musik.svg",
       logo: "/src/assets/projetos_musik-logo.svg",
-      descricao: "Design de aplicativo de streaming musical com foco em experiência do usuário.",
-      tipo: "Trabalho escolar."
+      descricao: "Breve descrição do projeto 3.",
+      tipo: "Trabalho acadêmico."
     },
 
     {
       nome: "Mary's Team",
-      categoria: "Design",
       link: "https://example.com",
       imagem: "/src/assets/projetos_mary.svg",
       logo: "/src/assets/projetos_mary-logo.svg",
-      descricao: "Projeto desenvolvido para a 2ª fase da OBT 2022, com foco no combate à pobreza menstrual.",
-      tipo: "Projeto colaborativo escolar."
+      descricao: "Breve descrição do projeto 3.",
+      tipo: "Trabalho acadêmico."
     },
     
   ];
 
-  
-  const projetosFiltrados =
-    filtro === "Todos"
-      ? projetos
-      : projetos.filter((p) => p.categoria === filtro);
-
   return (
     <SectionProjetos id="section-03">
       <Title>Projetos</Title>
-
-      <FilterWrapper>
-              {["Todos", "Design", "JavaScript", "Python"].map((cat) => (
-                <FilterButton
-                  key={cat}
-                  active={filtro === cat}
-                  onClick={() => setFiltro(cat)}
-                >
-                  {cat}
-                </FilterButton>
-              ))}
-            </FilterWrapper>
-
-      <Carousel ref={carouselRef}>
-        {projetosFiltrados.map((proj, index) => (
+      <Carousel>
+        {projetos.map((proj, index) => (
           <Card key={index}>
             <ImageWrapper href={proj.link} target="_blank" rel="noopener noreferrer">
               <img src={proj.imagem} alt={proj.nome} />
             </ImageWrapper>
             <CardContent>
               <ProjectHeader>
-                <img src={proj.logo} alt={`Logo ${proj.nome}`} />
+                <img src={proj.logo} 
+                alt={`Logo ${proj.nome}`} 
+                
+                style={{
+                  width: "50px",
+                  height: 
+                  proj.nome === "Recriação do IFOOD" ? "26px" :
+                  proj.nome === "IEM Games" ? "50px" :
+                  proj.nome === "Musik" ? "50px" :
+                  "auto",
+                }}
+                
+              
+                
+                />
                 <h3>{proj.nome}</h3>
               </ProjectHeader>
               <Description>{proj.descricao}</Description>
@@ -270,17 +190,6 @@ const Projetos = () => {
           </Card>
         ))}
       </Carousel>
-
-      <ArrowWrapper>
-        <ArrowButton onClick={() => scroll("left")}>
-          <img src="/src/assets/projetos_seta-esquerda.svg" alt="Seta para a esquerda" />
-        </ArrowButton>
-
-        <ArrowButton onClick={() => scroll("right")}>
-          <img src="/src/assets/projetos_seta-direita.svg" alt="Seta para a direita" />
-        </ArrowButton>
-      </ArrowWrapper>
-
     </SectionProjetos>
   );
 };

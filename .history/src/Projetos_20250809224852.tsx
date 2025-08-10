@@ -6,7 +6,7 @@ const SectionProjetos = styled.section`
   position: relative;
   display: flex;
   flex-direction: column;
-  
+  align-items: center;
 `;
 
 const Title = styled.h2`
@@ -15,33 +15,25 @@ const Title = styled.h2`
   color: #FFBB1B;
   letter-spacing: 4px;
   margin-top: 120px;
-  margin-bottom: 45px;
-  justify-content: center;
-  text-align: center;
+  margin-bottom: 14px;
   
 `;
 
-const FilterWrapper = styled.div`
-  display: flex;
-  gap: 12px;
-  display: flex;
-  position: relative;
-  left: 20%;
-`;
+const FilterWrapper = styled
 
-const FilterButton= styled.button<{ active: boolean }>`
-  background: ${({ active }) => (active ? "#FFBB1B" : "transparent")};
+const FilterSelect = styled.select`
+  background: rgba(0, 70, 121, 0.5);
   color: #FFFFFF;
   font-size: 18px;
-  padding: 8px 14px;
+  padding: 8px 12px;
   border: 2px solid #FFBB1B;
   border-radius: 8px;
   font-family: "Inter", sans-serif;
+  margin-bottom: 20px;
   cursor: pointer;
-  transition: 0.3s;
 
-  &:hover {
-    background: #e6a919;
+  option {
+    background: rgba(0, 70, 121, 1);
   }
 
 `;
@@ -54,7 +46,8 @@ const Carousel = styled.div`
   scroll-behavior: smooth;
   width: 100%;
   max-width: 62%;
-  align-self: center;
+  justify-content: start;
+  align-items: center;
 
   &::-webkit-scrollbar {
     display: none;
@@ -72,13 +65,13 @@ const Card = styled.div`
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  margin-top: 5px;
+  margin-top: 30px;
 `;
 
 const ImageWrapper = styled.a`
   position: relative;
   width: 350px;
-  height: 246px;
+  height: 248.5;
   overflow: hidden;
   cursor: pointer;
 
@@ -108,8 +101,8 @@ const ProjectHeader = styled.div`
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin-top: 25px;
-  margin-bottom: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
 
   img {
     width: 50px;
@@ -150,7 +143,7 @@ const WorkType = styled.span`
 `;
 
 const ArrowWrapper = styled.div`
-  margin-top: 15px;
+  margin-top: 40px;
   display: flex;
   gap: 30px;
   justify-content: center;
@@ -232,26 +225,21 @@ const Projetos = () => {
   ];
 
   
-  const projetosFiltrados =
-    filtro === "Todos"
-      ? projetos
-      : projetos.filter((p) => p.categoria === filtro);
+const projetosFiltrados =
+  filtro === "Todos"
+    ? projetos
+    : projetos.filter((p) => p.categoria === filtro);
 
   return (
     <SectionProjetos id="section-03">
       <Title>Projetos</Title>
 
-      <FilterWrapper>
-              {["Todos", "Design", "JavaScript", "Python"].map((cat) => (
-                <FilterButton
-                  key={cat}
-                  active={filtro === cat}
-                  onClick={() => setFiltro(cat)}
-                >
-                  {cat}
-                </FilterButton>
-              ))}
-            </FilterWrapper>
+      <FilterSelect value={filtro} onChange={(e) => setFiltro(e.target.value)}>
+        <option value="Todos">Todos</option>
+        <option value="Design">Design</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="Python">Python</option>
+    </FilterSelect>
 
       <Carousel ref={carouselRef}>
         {projetosFiltrados.map((proj, index) => (
