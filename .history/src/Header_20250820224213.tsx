@@ -99,7 +99,7 @@ const ContatoButton = styled.button`
 const Header = () => {
   return (
     <HeaderContainer>
-        <Logo src="/logo.svg" alt="Logo" />
+        <Logo src={logo} alt="Logo" />
         <ContatoButton
             onClick={() => {
             const section = document.getElementById("section-04");

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import logo from "/pub";
 
 const HeaderContainer = styled.header`
   position: fixed;
@@ -99,7 +100,7 @@ const ContatoButton = styled.button`
 const Header = () => {
   return (
     <HeaderContainer>
-        <Logo src="/logo.svg" alt="Logo" />
+        <Logo src={logo} alt="Logo" />
         <ContatoButton
             onClick={() => {
             const section = document.getElementById("section-04");
