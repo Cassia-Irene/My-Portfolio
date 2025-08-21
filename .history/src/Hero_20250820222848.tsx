@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-import centralImg from "/svg_central.svg";
-import img1 from "/svg_figma.svg";
-import img2 from "/svg_html.svg";
-import img3 from "/svg_js.svg";
-import img4 from "/svg_css.svg";
-import ArrowRight from "/svg_seta_hero_sobre-mim.svg";
-import lateralImg from "/svg_lateral-1.svg"
+import centralImg from "svg_central.svg";
+import img1 from "svg_figma.svg";
+import img2 from "svg_html.svg";
+import img3 from "svg_js.svg";
+import img4 from "svg_css.svg";
+import ArrowRight from "./assets/svg_seta_hero_sobre-mim.svg";
+import lateralImg from "./assets/svg_lateral-1.svg"
 
 const HeroSection = styled.section`
   position: relative;

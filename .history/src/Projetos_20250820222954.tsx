@@ -11,7 +11,7 @@ import mary from "/projetos_mary.svg";
 import marylogo from "/projetos_mary-logo.svg";
 
 import setaesquerda from "/projetos_seta-esquerda.svg";
-import setadireita from "/projetos_seta-direita.svg";
+import setadireita from "projetos_seta-direita.svg";
 
 const SectionProjetos = styled.section`
   height: 100vh;

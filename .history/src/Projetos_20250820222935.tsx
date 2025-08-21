@@ -6,12 +6,12 @@ import ifoodlogo from "/projetos_ifood-logo.svg";
 import iemgames from "/projetos_iem-games.svg";
 import iemgameslogo from "/projetos_iem-games-logo.svg";
 import musik from "/projetos_musik.svg";
-import musiklogo from "/projetos_musik-logo.svg";
-import mary from "/projetos_mary.svg";
-import marylogo from "/projetos_mary-logo.svg";
+import musiklogo from "./assets/projetos_musik-logo.svg";
+import mary from "./assets/projetos_mary.svg";
+import marylogo from "./assets/projetos_mary-logo.svg";
 
-import setaesquerda from "/projetos_seta-esquerda.svg";
-import setadireita from "/projetos_seta-direita.svg";
+import setaesquerda from "./assets/projetos_seta-esquerda.svg";
+import setadireita from "./assets/projetos_seta-direita.svg";
 
 const SectionProjetos = styled.section`
   height: 100vh;

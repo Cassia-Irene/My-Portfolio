@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import Cerebro from "/cerebro-sm.svg";
+import Cerebro from "cerebro-sm.svg";
 import MyImg from "/my-img.svg";
-import lateralImg from "/svg_lateral-2.svg"
+import lateralImg from "/assets/svg_lateral-2.svg"
 
 const SobremimSection = styled.section`
   height: 100vh;

@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import skills1 from "/svg_skills1.svg";
-import skills2 from "/svg_skills2.svg";
-import skills3 from "/svg_skills3.svg";
-import skills4 from "/svg_skills4.svg";
-import skills5 from "/svg_skills5.svg";
-import skills6 from "/svg_skills6.svg";
+import skills2 from "./assets/svg_skills2.svg";
+import skills3 from "./assets/svg_skills3.svg";
+import skills4 from "./assets/svg_skills4.svg";
+import skills5 from "./assets/svg_skills5.svg";
+import skills6 from "./assets/svg_skills6.svg";
 
 
 const SectionSkills = styled.section`

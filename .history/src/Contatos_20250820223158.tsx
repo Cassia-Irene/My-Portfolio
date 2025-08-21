@@ -2,9 +2,9 @@ import styled from "styled-components";
 import lateralImg from "/svg_lateral-3.svg"
 
 import zap from "/contatos-zap.svg";
-import email from "/contatos-email.svg";
-import linkedin from "/contatos-linkedin.svg";
-import github from "/contatos-github.svg";
+import email from "./assets/contatos-email.svg";
+import linkedin from "./assets/contatos-linkedin.svg";
+import github from "./assets/contatos-github.svg";
 
 const SectionContatos = styled.section`
   height: 100vh;
