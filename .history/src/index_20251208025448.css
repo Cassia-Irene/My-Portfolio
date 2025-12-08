@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* plugins normais */
+@import "tw-animate-css";
+
+/* seu CSS normal */
+body {
+  background-color: #00171F;
+}
+
+@keyframes border-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.animate-border-move {
+  background-size: 200% 200%;
+  animation: border-move 3s linear infinite;
+}
