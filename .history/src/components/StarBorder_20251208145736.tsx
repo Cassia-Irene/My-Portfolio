@@ -22,7 +22,7 @@ const StarBorder = <T extends React.ElementType = 'button'>({
 
   return (
     <Component
-      className={`relative inline-block overflow-hidden rounded-full ${className}`}
+      className={`relative inline-block overflow-hidden rounded-[20px] ${className}`}
       {...rest}
       style={{
         padding: `${thickness}px 0`,

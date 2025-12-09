@@ -39,7 +39,7 @@ const Header: React.FC = () => {
           <img 
             src={LogoImg} 
             alt="Logo" 
-            className="w-[50px] h-[36px] md:w-[60px] md:h-[44px] lg:w-[70px] lg:h-[54px] 2xl:w-[80px] 2xl:h-[64px]"
+            className="w-[50px] h-[36px] md:w-[80px] md:h-[64px]"
           />
         </a>
 
@@ -49,7 +49,7 @@ const Header: React.FC = () => {
             as="div"
             color="cyan"
             speed="4s"
-            className="z-10 w-[100%] max-w-[650px] mx-auto"
+            className="z-10 w-[60%] max-w-[650px] mx-auto"
           >
             <nav>
               <ul className="flex gap-7 justify-center">

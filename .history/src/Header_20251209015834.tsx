@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
-import { IoLanguage } from "react-icons/io5";
 import StarBorder from "./components/StarBorder";
 import LogoImg from "../public/logo.svg";
 
@@ -29,9 +28,9 @@ const Header: React.FC = () => {
     <>
       {/* ======= CONTAINER PRINCIPAL DO HEADER ======= */}
       <div className="
-        fixed top-10 w-full z-[1002]
-        px-6 lg:px-16 
-        flex items-center justify-between
+        fixed top-12 left-0 w-full z-[1002]
+        px-6 
+        flex items-stretch justify-between
       ">
         
         {/* === LOGO === */}
@@ -39,7 +38,7 @@ const Header: React.FC = () => {
           <img 
             src={LogoImg} 
             alt="Logo" 
-            className="w-[50px] h-[36px] md:w-[60px] md:h-[44px] lg:w-[70px] lg:h-[54px] 2xl:w-[80px] 2xl:h-[64px]"
+            className="w-[95px] h-[76px] md:w-[80px] md:h-[64px]"
           />
         </a>
 
@@ -52,7 +51,7 @@ const Header: React.FC = () => {
             className="z-10 w-[100%] max-w-[650px] mx-auto"
           >
             <nav>
-              <ul className="flex gap-7 justify-center">
+              <ul className="flex gap-7 justify-center py-3">
                 {navItems.map((item) => (
                   <li key={item.id}>
                     <a
@@ -75,25 +74,23 @@ const Header: React.FC = () => {
           {/* Botão idioma desktop */}
           <button
             onClick={() => setLang(lang === "PT" ? "EN" : "PT")}
-            className="hidden md:flex items-center gap-2 bg-[#FFBB1B] text-[#00171F] px-4 py-2 rounded-xl font-bold hover:bg-yellow-500 transition"
+            className="hidden md:block bg-[#FFBB1B] text-[#00171F] px-4 py-2 rounded-xl font-bold hover:bg-yellow-500 transition"
           >
-            <IoLanguage className="text-xl" />
-            {lang === "PT" ? "PT" : "EN"}
+            {lang === "PT" ? "EN" : "PT"}
           </button>
 
           {/* Botão idioma mobile */}
           <button
             onClick={() => setLang(lang === "PT" ? "EN" : "PT")}
-            className="md:hidden flex items-center gap-1.5 bg-[#FFBB1B] text-[#00171F] text-sm px-2.5 py-1.5 rounded-lg font-bold hover:bg-yellow-500 transition"
+            className="md:hidden bg-[#FFBB1B] text-[#00171F] px-3 py-1.5 rounded-lg font-bold hover:bg-yellow-500 transition"
           >
-            <IoLanguage className="text-sm" />
-            {lang === "PT" ? "PT" : "EN"}
+            {lang === "PT" ? "EN" : "PT"}
           </button>
 
           {/* Botão hambúrguer (mobile) */}
           <button 
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden text-[#FFBB1B] text-2xl"
+            className="md:hidden text-[#FFBB1B] text-3xl"
           >
             {menuOpen ? <IoClose /> : <RxHamburgerMenu />}
           </button>

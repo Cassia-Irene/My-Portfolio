@@ -39,7 +39,7 @@ const Header: React.FC = () => {
           <img 
             src={LogoImg} 
             alt="Logo" 
-            className="w-[50px] h-[36px] md:w-[60px] md:h-[44px] lg:w-[70px] lg:h-[54px] 2xl:w-[80px] 2xl:h-[64px]"
+            className="w-[50px] h-[36px] md:w-[60px] md:h-[44px] lg:w-[70px] lg:h-[54px] 2xl:w-[80px] xl:h-[64px]"
           />
         </a>
 
