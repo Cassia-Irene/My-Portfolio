@@ -1,9 +1,8 @@
-/* plugins normais */
-@import "tw-animate-css";
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
 
 /* seu CSS normal */
 body {
